@@ -50,7 +50,7 @@
                     
                     <div class="btn-b">
                     <button class="btn btn-primary" data-dismiss="modal">Cancel</button>&nbsp;&nbsp;
-                    <button class="btn btn-secondary" (click)="savedata()" data-dismiss="modal">Add</button>
+                    <button class="btn btn-secondary" (click)="savedata()" data-dismiss="modal" [disabled]='detailsForm.invalid' >Add</button>
                   </div>
                   </form>
                 </div>
@@ -101,7 +101,7 @@
                     
                     <div class="btn-b">
                     <button class="btn btn-primary" data-dismiss="modal">Cancel</button>&nbsp;&nbsp;
-                    <button class="btn btn-secondary" (click)="updatedata()" data-dismiss="modal">Update</button>
+                    <button class="btn btn-secondary" (click)="updatedata()" data-dismiss="modal" [disabled]='detailsForm.invalid'>Update</button>
                   </div>
                   </form>
                 </div>

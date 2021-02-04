@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ServiceService } from '../service.service';
 
 @Component({
@@ -16,11 +16,11 @@ export class DashboardComponent implements OnInit {
   currentPage = 1;
   detailsForm=new FormGroup({
     id:new FormControl(''),
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
+    firstName: new FormControl('',Validators.required),
+    lastName: new FormControl('',Validators.required),
     Id: new FormControl(''),
-    gender: new FormControl(''),
-    grade: new FormControl(''),
+    gender: new FormControl('',Validators.required),
+    grade: new FormControl('',Validators.required),
   }) 
   firstName: void;
   constructor(private service:ServiceService) { 

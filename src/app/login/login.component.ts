@@ -22,7 +22,9 @@ this.submitted=true
 if(this.form.invalid){
 return
 }else{
+ 
   if(this.form.controls['uname'].value=='admin@persistent.com' && this.form.controls['pwd'].value=='BookingAdmin'){
+    
 localStorage.setItem('user',this.form.value.uname)
 this.r.navigate(['dashboard'])
   }else{
